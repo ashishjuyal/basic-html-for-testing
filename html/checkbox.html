@@ -11,7 +11,7 @@
     <title>CheckboxTest</title>
 </head>
 <body>
-<div class="container">
+<div class="container" id="main">
 <br>
 <form>
     <input type="checkbox" id="mayoCheckbox" value="mayo"> Mayo<br>
@@ -20,6 +20,18 @@
 </form>
 <br>
 <a href="./index.html" id="table">Back</a>
+<br><br>
 </div>
 </body>
+<script>
+    setTimeout(() => {
+      var div = document.createElement('div');
+      div.textContent = "Loading complete...";
+      div.setAttribute('class', 'alert alert-primary col-md-6');
+      div.setAttribute('role', 'alert');
+      div.setAttribute('id', 'message');
+      var main = document.getElementById("main");
+      main.appendChild(div);
+    }, 3000);
+</script>
 </html>
